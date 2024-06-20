@@ -1,0 +1,11 @@
+1) we should create TLS certificate using this command -
+openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tls.key -out tls.crt
+-subj"/CN=my-demo-app" -days 365
+
+create a secret - kubectl create secret tls my-mywisecow-app-tls --cert=tls.crt --key=tls.key
+
+
+2)Install ingress controller command - mimikube addonds enable ingress
+  to see nginx - kubectl get pods -A | grep nginx
+
+3)

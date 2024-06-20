@@ -7,13 +7,13 @@ metadata:
 spec:
   tls:
   - hosts:
-    - my-demo-app.local
-    secretName: my-demo-app-tls
+    - my-wisecow-app.local
+    secretName: my-mywisecow-app-tls
   rules:
-  - host: my-demo-app.local
+  - host: my-wisecow-app.local
     http:
       paths:
-      - path: /
+      - path: /run
         pathType: Prefix
         backend:
           service:
